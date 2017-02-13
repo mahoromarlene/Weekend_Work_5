@@ -1,0 +1,25 @@
+# Create a moto class with three attributes, name, plaque and speed,
+# if a driver goes beyond 100 speed, it flash a message "slow down"
+# If he is below 100 speed, it flash a message "You are safe, keep driving"
+
+
+class Moto
+  attr_accessor :name, :plaque, :speed
+
+  def initialize(motion)
+    @name = motion[:name]
+    @plaque = motion[:plaque]
+    @speed = motion[:speed]
+  end
+
+end
+
+moto = Moto.new(name:"Honda", plaque:"RA230", speed: 40)
+
+moto.speed = 120
+
+if moto.speed >= 100
+  puts "Slow down"
+else
+  puts "You are safe, keep driving"
+end
